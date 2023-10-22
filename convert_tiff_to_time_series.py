@@ -7,11 +7,15 @@ from scipy.io import savemat
 
 #users will need to change the following line to point to the location where their data is
 dataFolder = "/home/andre/Downloads/channel2/"
+#get all files in the folder
 files = os.listdir(dataFolder)
+#sort the files list in ascending order
+files = sorted(files)
 
 for index, item in enumerate(files):
     #make sure we are only using the tif files inside the folder
-    if item[-3:]=="tif"
+    if item[-3:]=="tif":
+        
         #load one image
         im = Image.open(dataFolder+item)
         #convert it to numpy array
